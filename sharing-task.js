@@ -36,6 +36,18 @@ reusable functions that solve specific tasks. This activity encourages:
 // 3. Capitalize the role if needed.
 // 4. Return the result.
 
+    let attendee = "alice";
+    let role = "speaker";
+
+function capitalization(info) {
+    return info.charAt(0).toUpperCase() + info.slice(1);
+}
+function printBadge(name, role) {
+    console.log(`Name: ${capitalization(name)}, Role: ${capitalization(role)}`);
+}
+
+printBadge(attendee, role);
+
 
 // ============================================
 // 🧩 Task 2: Calculate Event Cost
@@ -51,6 +63,30 @@ reusable functions that solve specific tasks. This activity encourages:
 // 3. If so, apply a 10% discount.
 // 4. Return the final total.
 
+function calTotalCost(attendees, costPerAttendee) {
+    let totalCost = attendees * costPerAttendee;
+    if (attendees > 100) { 
+        totalCost = totalCost * 0.9; 
+    }
+    return totalCost; 
+}
+let total = calTotalCost(105, 25);
+console.log(total);
+
+// Also the other way code 
+//let costPerAttendee = 50;
+//let discount = 0.9; // 10% discount
+//let totalCost;
+//function eventCost(numberOfAttend){
+//       if (numberOfAttend > 100){
+//           totalCost = numberOfAttend * costPerAttendee * discount;
+//       }else {
+//           totalCost = numberOfAttend * costPerAttendee;
+//       }
+//       console.log(`The event cost for ${numberOfAttend} number of attendees = ${totalCost}`);
+//   }
+//  eventCost(101);
+
 
 // ============================================
 // 🧩 Task 3: Validate Email
@@ -64,6 +100,16 @@ reusable functions that solve specific tasks. This activity encourages:
 // 1. Check if the string includes both "@" and ".".
 // 2. Return true or false accordingly.
 
+
+function isValidEmail(email) {
+    if (email.includes('@') && email.includes('.')) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(isValidEmail("groupD@yahoo.com")); 
+console.log(isValidEmail("gobaby123.com"));
 
 // ============================================
 // 🧠 Collaborative Steps
@@ -89,3 +135,11 @@ reusable functions that solve specific tasks. This activity encourages:
 // - Explain how your team approached the design and testing process
 
 // ✅ Bonus: Can you extend any of the functions to be more flexible or reusable?
+
+
+
+
+
+
+
+
